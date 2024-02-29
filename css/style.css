@@ -1,0 +1,103 @@
+:root {
+  --text-color: white;
+  --bg-url: url(../assets/bg_links_btb.jpg);
+  --bg-switch-url: url(../assets/moon-stars.svg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --background-social-hover: rgba(255, 255, 255, 0.2);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+  list-style: none;
+}
+
+body {
+  background-image: var(--bg-url);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+#container {
+  width: 100%;
+  max-width: 588px;
+  margin: 56px auto 0;
+  padding: 0 24px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.profile p {
+  font-weight: 500;
+  line-height: 24px;
+  padding-top: 8px;
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+.links .links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.links-list .item-list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+
+  background-color: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 24px;
+  transition: all 200ms ease;
+}
+
+.links-list .item-list a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
